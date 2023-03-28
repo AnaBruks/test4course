@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Enter Equation</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Enter Equation</h1>
+<form method="post" action="/equations">
+    <label for="equation">Equation:</label>
+    <input type="text" id="equation" name="equation" required th:field="*{left}"/> =
+    <input type="text" id="right" name="right" required th:field="*{right}"/>
+    <br><br>
+    <label for="roots">Roots:</label>
+    <input type="text" id="roots" name="roots" placeholder="Enter roots separated by commas" th:field="*{roots}"/>
+    <br><br>
+    <input type="submit" value="Save"/>
+</form>
+</body>
+</html>
